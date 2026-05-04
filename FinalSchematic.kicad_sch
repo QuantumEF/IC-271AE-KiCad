@@ -1999,6 +1999,46 @@
 			(embedded_fonts no)
 		)
 	)
+	(text_box "NOTE\n\nSome connector names are not exactly how they might be listed in the original schematics"
+		(exclude_from_sim no)
+		(at 16.51 167.64 0)
+		(size 58.42 22.86)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "59a09fbe-db85-473b-a3e0-31809389e918")
+	)
+	(text_box "From Service Manual - Section 5-1-1 Antenna Switching Circuit (PA Unit)\n\nRecieve signals from the PA UNIT antenna connector (J1) pass to the antenna switching circuit (D1,D2) via the PA UNIT low-pass filter consisting of L2 through L5, C9, C10 and C12 through C17. While receiving, approximately 13.8 volts is applied to the cathode side of D2 thus causing D2 to be reverse-biased and switched OFF. While transmitting, T8V is supplied to D2 from D1 which causes D2 to switch ON. D2 and C11 ground any leakage to protect the receiver.\n\nIn addition, because the anode side of D1 is at ground level during reception, D1 is reverse-biased and switched OFF, providing good isolation from IC1. While transmitting, T8V keeps D1 turned ON. Thr receive signals feed via P2 to the RF-YGR UNIT(J4)\n"
+		(exclude_from_sim no)
+		(at 218.44 15.24 0)
+		(size 59.69 38.1)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "ec5ee017-241f-4881-bb39-8be1fcbc39e0")
+	)
 	(junction
 		(at 220.98 97.79)
 		(diameter 0)
@@ -3754,6 +3794,72 @@
 			(type default)
 		)
 		(uuid "feae59b6-0bb4-474d-8522-8fa532baa9d1")
+	)
+	(global_label "PAV"
+		(shape input)
+		(at 157.48 45.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "05afa593-d62f-4e83-981e-e754d892b8b3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 151.0476 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PowerMeter"
+		(shape input)
+		(at 240.03 58.42 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "64f89333-df83-430f-9047-a15ce034f180")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 253.78 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "T8"
+		(shape input)
+		(at 176.53 55.88 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dc6bc103-56df-48a3-97b3-a19f0197d99e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 181.6923 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
