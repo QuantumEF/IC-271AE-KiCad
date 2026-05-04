@@ -1999,6 +1999,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "a"
+		(exclude_from_sim no)
+		(at 132.334 284.734 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a645b569-61e7-438d-b4d7-41032e0ed381")
+	)
 	(text_box "NOTE\n\nSome connector names are not exactly how they might be listed in the original schematics"
 		(exclude_from_sim no)
 		(at 16.51 167.64 0)
@@ -2018,6 +2028,26 @@
 			(justify left top)
 		)
 		(uuid "59a09fbe-db85-473b-a3e0-31809389e918")
+	)
+	(text_box "From Service Manual - Section 5-2-7 POWER AMPLIFIER\n\nThis sate raises the 200 milliwatt signal to 25 watts (IC-271H:100W).\n\nIC1 amplifies the 200 milliwats output from the RF-YGR UNIT J1 to approximately 25 watts after which the high harmonics are removed by the low-pass filter L1 though L3, and C11 through C16. spurious emissions are attenuated 60dB or more below the fundamental frequency. In the IC-271H version, the output is divided to L5 and L6, and the input to the Q5 and Q6 bases. After amplification to 50 watts each by the 2SC2694 transistors, the outputs are combined to 100 watts at the strip line on eht circuit board.\n\nC24 at the input side matches the 50 ohm output impedance of the low-pass filter and the low impedance of the 2SC2694 input. C29 at the output side is to adjust the output stage for a 50 ohm impedance; it is normally adjusted for an intermediate point in the band.\n\nSince the output of the final amplifier stage has a higher harmonic content (about 30 to 40 dB deblow the fundamental), the signal passes through another low-pass filter before reaching the antenna jack."
+		(exclude_from_sim no)
+		(at 82.55 144.78 0)
+		(size 90.17 46.99)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "7df516bd-25ff-440f-b7c7-f59281be43d1")
 	)
 	(text_box "From Service Manual - Section 5-1-1 Antenna Switching Circuit (PA Unit)\n\nRecieve signals from the PA UNIT antenna connector (J1) pass to the antenna switching circuit (D1,D2) via the PA UNIT low-pass filter consisting of L2 through L5, C9, C10 and C12 through C17. While receiving, approximately 13.8 volts is applied to the cathode side of D2 thus causing D2 to be reverse-biased and switched OFF. While transmitting, T8V is supplied to D2 from D1 which causes D2 to switch ON. D2 and C11 ground any leakage to protect the receiver.\n\nIn addition, because the anode side of D1 is at ground level during reception, D1 is reverse-biased and switched OFF, providing good isolation from IC1. While transmitting, T8V keeps D1 turned ON. Thr receive signals feed via P2 to the RF-YGR UNIT(J4)\n"
 		(exclude_from_sim no)
@@ -3920,7 +3950,7 @@
 			(uuid "3d3d3ddc-438c-4e20-a5da-96302afda577")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "TP3")
 					(unit 1)
@@ -3986,7 +4016,7 @@
 			(uuid "af8f304a-19d8-44b0-baea-74d1428eb530")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR03")
 					(unit 1)
@@ -4054,7 +4084,7 @@
 			(uuid "367c5bbf-df84-45d5-8084-29dee0e546d8")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C6")
 					(unit 1)
@@ -4123,7 +4153,7 @@
 			(uuid "4a4f1add-ce06-410a-a5a9-4904fef2f08c")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "J6")
 					(unit 1)
@@ -4193,7 +4223,7 @@
 			(uuid "d9d77ae5-40bf-42c5-baaf-cdc0a2daf856")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C7")
 					(unit 1)
@@ -4259,7 +4289,7 @@
 			(uuid "430225a3-c18c-4185-a417-2950670170b4")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR01")
 					(unit 1)
@@ -4325,7 +4355,7 @@
 			(uuid "604abfcf-c517-465a-9f72-e22555eba5ff")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR016")
 					(unit 1)
@@ -4395,7 +4425,7 @@
 			(uuid "4e7fdfe4-4d9b-46be-be3d-a979cfa43c2e")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C16")
 					(unit 1)
@@ -4465,7 +4495,7 @@
 			(uuid "a2a1cb7b-e352-43ea-84e4-6e9bd2beafa9")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C18")
 					(unit 1)
@@ -4535,7 +4565,7 @@
 			(uuid "e551ef1c-fbab-427e-8fa1-0bcb34672c74")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "R3")
 					(unit 1)
@@ -4603,7 +4633,7 @@
 			(uuid "4da615b8-0e69-4d93-90bb-01c94ccd96dd")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "R1")
 					(unit 1)
@@ -4673,7 +4703,7 @@
 			(uuid "6ad1d6d4-29e3-4adb-a73c-2657af2a3a42")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "R4")
 					(unit 1)
@@ -4740,7 +4770,7 @@
 			(uuid "56d4bf75-9143-4323-a130-d9ea1b5bc851")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "TP1")
 					(unit 1)
@@ -4810,7 +4840,7 @@
 			(uuid "af0e7eca-bca0-48f2-8ce1-921d4ff83c9c")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "J3")
 					(unit 1)
@@ -4820,7 +4850,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 127 157.48 0)
+		(at 194.31 153.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -4829,7 +4859,7 @@
 		(fields_autoplaced yes)
 		(uuid "3d9062d2-5114-4886-a57a-6ef6f6c149e0")
 		(property "Reference" "C19"
-			(at 130.81 156.2099 0)
+			(at 198.12 152.3999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4838,7 +4868,7 @@
 			)
 		)
 		(property "Value" "Ceramic 0.0047 50V"
-			(at 130.81 158.7499 0)
+			(at 198.12 154.9399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4847,7 +4877,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 127.9652 161.29 0)
+			(at 195.2752 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4856,7 +4886,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 127 157.48 0)
+			(at 194.31 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4865,7 +4895,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 127 157.48 0)
+			(at 194.31 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4880,7 +4910,7 @@
 			(uuid "d89bd21c-44f8-4a18-b1e6-f24ceb143831")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C19")
 					(unit 1)
@@ -4948,7 +4978,7 @@
 			(uuid "f2c53f6a-9f27-40bf-bf18-ae392a8be11b")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "L3")
 					(unit 1)
@@ -5014,7 +5044,7 @@
 			(uuid "354a2c95-9709-4db8-b035-04482f13ae96")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR08")
 					(unit 1)
@@ -5084,7 +5114,7 @@
 			(uuid "8ba39135-05dd-46da-9b74-2afd6dceefca")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "L1")
 					(unit 1)
@@ -5154,7 +5184,7 @@
 			(uuid "dc015986-d24a-4a82-8d13-6d0ea18fd535")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C14")
 					(unit 1)
@@ -5220,7 +5250,7 @@
 			(uuid "53461bd9-588f-4bb6-8f4a-4cbf93d84212")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR05")
 					(unit 1)
@@ -5290,7 +5320,7 @@
 			(uuid "30e69b1e-a433-4ed0-8a6e-b40c6c75ad41")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "L6")
 					(unit 1)
@@ -5356,7 +5386,7 @@
 			(uuid "8e464e30-2a88-4285-b267-38bf660af7c2")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR02")
 					(unit 1)
@@ -5426,7 +5456,7 @@
 			(uuid "c52cba90-c280-4442-81ed-eb652a9c8261")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C21")
 					(unit 1)
@@ -5513,7 +5543,7 @@
 			(uuid "659bd9bc-828f-4410-a3c6-cdc80c5a4a74")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "D3")
 					(unit 1)
@@ -5579,7 +5609,7 @@
 			(uuid "1ccf6637-2e2e-455a-bca1-a45cb82f9523")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR012")
 					(unit 1)
@@ -5646,7 +5676,7 @@
 			(uuid "1ce7ebce-6257-486d-aebd-e8aa47776221")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "TP7")
 					(unit 1)
@@ -5712,7 +5742,7 @@
 			(uuid "dba9724f-519e-412b-8ec4-22ae2802d20b")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR011")
 					(unit 1)
@@ -5780,7 +5810,7 @@
 			(uuid "b167a5c0-9118-460e-b000-9c0ea956f826")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C13")
 					(unit 1)
@@ -5850,7 +5880,7 @@
 			(uuid "66f78e01-e265-4a51-926d-efdcf1995a4c")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C3")
 					(unit 1)
@@ -5918,7 +5948,7 @@
 			(uuid "132aca9e-63d7-4f7c-ae41-e264e16bf2c7")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "R2")
 					(unit 1)
@@ -5988,7 +6018,7 @@
 			(uuid "0048ea4a-4834-48eb-adce-c7e373d8fca0")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C10")
 					(unit 1)
@@ -6055,7 +6085,7 @@
 			(uuid "32f79d1f-5390-4ce6-ad49-e7d843fee5a1")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "J1")
 					(unit 1)
@@ -6122,7 +6152,7 @@
 			(uuid "d0b70ea4-0d12-4a32-940b-b26f3a0d4517")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "TP4")
 					(unit 1)
@@ -6208,7 +6238,7 @@
 			(uuid "0d2ad313-c27b-4d48-847e-4cb43eac0616")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "D2")
 					(unit 1)
@@ -6278,7 +6308,7 @@
 			(uuid "34c2375c-a003-4c72-9c4e-219bb9e0bb29")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C1")
 					(unit 1)
@@ -6345,7 +6375,7 @@
 			(uuid "4cfcf146-30ad-444b-a38e-f399760d5c5d")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C8")
 					(unit 1)
@@ -6413,7 +6443,7 @@
 			(uuid "410c042f-3a6a-4a8e-83a4-a730e854934d")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "R5")
 					(unit 1)
@@ -6479,7 +6509,7 @@
 			(uuid "fa987689-b1fa-4f02-b3c1-7738cb77a5b3")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR018")
 					(unit 1)
@@ -6546,7 +6576,7 @@
 			(uuid "49866db4-27c1-4821-b90c-b854ccb03ae3")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "TP6")
 					(unit 1)
@@ -6612,7 +6642,7 @@
 			(uuid "1a850a17-9991-4b27-b44d-195778626634")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR04")
 					(unit 1)
@@ -6682,7 +6712,7 @@
 			(uuid "08f7c2ea-c2eb-41f9-8e1b-17e24e84b6e3")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C5")
 					(unit 1)
@@ -6752,7 +6782,7 @@
 			(uuid "fa7c145e-4b21-4efc-af2f-4df38043fd4c")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C4")
 					(unit 1)
@@ -6819,7 +6849,7 @@
 			(uuid "1a5fc258-0a08-497f-a9ad-3735a910f5ad")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "TP5")
 					(unit 1)
@@ -6886,7 +6916,7 @@
 			(uuid "3e909f31-8296-41be-a5b6-4e36f1dc0c01")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "J14")
 					(unit 1)
@@ -6952,7 +6982,7 @@
 			(uuid "f5b1b8cd-48bd-4ca9-a3fb-979faa545e43")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR013")
 					(unit 1)
@@ -7031,7 +7061,7 @@
 			(uuid "bebecb62-4cb0-4dfa-b2af-46c12abcabb5")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "IC1")
 					(unit 1)
@@ -7101,7 +7131,7 @@
 			(uuid "ad2c0cc6-3b06-4ae1-988a-124a0f4ac93e")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "L2")
 					(unit 1)
@@ -7167,7 +7197,7 @@
 			(uuid "306c2d97-43d4-467d-8770-c06911f85f57")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR019")
 					(unit 1)
@@ -7233,7 +7263,7 @@
 			(uuid "02a067d7-ea01-4478-a070-db33ecfc87f8")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR07")
 					(unit 1)
@@ -7319,7 +7349,7 @@
 			(uuid "d8515785-14e0-41cc-917a-041a3635f50f")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "D1")
 					(unit 1)
@@ -7385,7 +7415,7 @@
 			(uuid "fe6791c1-d5ca-4d2c-9f8c-a0bbd8278b63")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR023")
 					(unit 1)
@@ -7453,7 +7483,7 @@
 			(uuid "e04c2160-8e12-4bd7-aa99-ab3d8c24858b")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "L4")
 					(unit 1)
@@ -7519,7 +7549,7 @@
 			(uuid "45b9b258-0306-46aa-b3f4-1b375343dc24")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR020")
 					(unit 1)
@@ -7589,7 +7619,7 @@
 			(uuid "70106a3b-eb40-403e-9086-aaf94b2049d2")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C12")
 					(unit 1)
@@ -7655,7 +7685,7 @@
 			(uuid "ca068bc2-8bc3-4939-8c61-960c0ec861a4")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR014")
 					(unit 1)
@@ -7725,7 +7755,7 @@
 			(uuid "a7b5f177-b206-4cf5-898c-9569b7674258")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C17")
 					(unit 1)
@@ -7792,7 +7822,7 @@
 			(uuid "ad13a886-0c99-4261-8766-c89340091fc4")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C9")
 					(unit 1)
@@ -7858,7 +7888,7 @@
 			(uuid "f0f9cb75-a19e-4863-b0ad-195e1d695685")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR022")
 					(unit 1)
@@ -7928,7 +7958,7 @@
 			(uuid "48fd37ba-4d5d-41f2-828f-0ca4359db8f8")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C11")
 					(unit 1)
@@ -7994,7 +8024,7 @@
 			(uuid "289f24ce-0226-4e09-b8ae-7c70e7652780")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR06")
 					(unit 1)
@@ -8060,7 +8090,7 @@
 			(uuid "493a5c2e-b373-4477-95b7-12ec9dd2a914")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR09")
 					(unit 1)
@@ -8148,7 +8178,7 @@
 			(uuid "eb623970-0c57-4ea6-a594-770f28caab60")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "J2")
 					(unit 1)
@@ -8216,7 +8246,7 @@
 			(uuid "677f45a0-dc2e-4920-a80e-9165980d1f55")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "L5")
 					(unit 1)
@@ -8282,7 +8312,7 @@
 			(uuid "c06ec235-e917-4617-bca2-4478721dd0cd")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR015")
 					(unit 1)
@@ -8348,7 +8378,7 @@
 			(uuid "a6d8853f-619d-48b6-8b99-dbc51f28f838")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR021")
 					(unit 1)
@@ -8416,7 +8446,7 @@
 			(uuid "c0fe6b91-308f-495f-97a3-12788288ccfd")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C15")
 					(unit 1)
@@ -8482,7 +8512,7 @@
 			(uuid "a946292a-568e-4641-aa85-ca07062b4e4e")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR010")
 					(unit 1)
@@ -8492,7 +8522,7 @@
 	)
 	(symbol
 		(lib_id "Device:D")
-		(at 116.84 157.48 0)
+		(at 184.15 153.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -8501,7 +8531,7 @@
 		(fields_autoplaced yes)
 		(uuid "f3e96a59-41e0-4b7d-8457-baa286491f2c")
 		(property "Reference" "D4"
-			(at 116.84 151.13 0)
+			(at 184.15 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8509,7 +8539,7 @@
 			)
 		)
 		(property "Value" "15CD11"
-			(at 116.84 153.67 0)
+			(at 184.15 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8517,7 +8547,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 116.84 157.48 0)
+			(at 184.15 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8526,7 +8556,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 116.84 157.48 0)
+			(at 184.15 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8535,7 +8565,7 @@
 			)
 		)
 		(property "Description" "Diode"
-			(at 116.84 157.48 0)
+			(at 184.15 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8544,7 +8574,7 @@
 			)
 		)
 		(property "Sim.Device" "D"
-			(at 116.84 157.48 0)
+			(at 184.15 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8553,7 +8583,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 116.84 157.48 0)
+			(at 184.15 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8568,7 +8598,7 @@
 			(uuid "2e7fa193-fc75-49f1-8351-c74513210fcc")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "D4")
 					(unit 1)
@@ -8578,7 +8608,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 154.94 157.48 0)
+		(at 222.25 153.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -8587,7 +8617,7 @@
 		(fields_autoplaced yes)
 		(uuid "f6c26eff-a55d-487a-be2e-cae3114fb382")
 		(property "Reference" "C20"
-			(at 158.75 156.2099 0)
+			(at 226.06 152.3999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8596,7 +8626,7 @@
 			)
 		)
 		(property "Value" "Ceramic 0.0047 50V"
-			(at 158.75 158.7499 0)
+			(at 226.06 154.9399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8605,7 +8635,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 155.9052 161.29 0)
+			(at 223.2152 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8614,7 +8644,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 154.94 157.48 0)
+			(at 222.25 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8623,7 +8653,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 154.94 157.48 0)
+			(at 222.25 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8638,7 +8668,7 @@
 			(uuid "1a9d89f3-a8af-4825-8374-9285177981c1")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C20")
 					(unit 1)
@@ -8705,7 +8735,7 @@
 			(uuid "945a4e8e-3b1b-42a8-9632-9812d5abbce0")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "TP2")
 					(unit 1)
@@ -8771,7 +8801,7 @@
 			(uuid "8b751e0c-04ff-497c-8027-c5b6246a27e7")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "#PWR017")
 					(unit 1)
@@ -8841,7 +8871,7 @@
 			(uuid "6a7c66a0-782a-4f8e-8e2b-a67eba34e861")
 		)
 		(instances
-			(project "FinalSchematic"
+			(project "PA_UNIT"
 				(path "/2f0a2d43-95a2-4306-a499-ddc32565a92b"
 					(reference "C2")
 					(unit 1)
