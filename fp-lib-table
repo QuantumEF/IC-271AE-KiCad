@@ -1,4 +1,4 @@
 (fp_lib_table
   (version 7)
-  (lib (name "ProjectLib")(type "KiCad")(uri "/home/quantum_p/Documents/manuals/Radio/ChucksBrokenVHFUnit/FinalSchematic")(options "")(descr ""))
+  (lib (name "PA_UNIT")(type "KiCad")(uri "${KIPRJMOD}/PA_UNIT_Footprints")(options "")(descr ""))
 )
